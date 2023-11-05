@@ -7,6 +7,7 @@
 table {
 	border-collapse: collapse;
 	width: 100%;
+	background: linear-gradient(#BCF9F9, #E7FDFD);
   }
 
   th {
@@ -20,3 +21,14 @@ table {
   th.highlighted {
 	background-color: yellow;
   }
+
+body{
+	     /* Establecer la imagen como fondo del cuerpo */
+		 background-image: url('OIG.jpeg'); /* Reemplaza 'ruta_de_la_imagen.jpg' con la ruta de tu imagen */
+		 background-size: cover; /* Ajustar el tamaño de la imagen para cubrir todo el fondo */
+		 background-position: center; /* Centrar la imagen */
+		 background-repeat: no-repeat; /* Evitar que la imagen se repita */
+		 /* Puedes ajustar otros estilos según tus preferencias */
+		font-family: sans-serif;
+		}
+
