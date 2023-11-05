@@ -8,6 +8,9 @@
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
+
+
+
 <body >
 	<section>
 		<h1>
@@ -164,4 +167,24 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</html>
+
+  <script>
+  // Función para iluminar los th correspondientes a una lista de datos
+  function iluminarPorDatos(datos) {
+    var ths = document.getElementsByTagName('th');
+    for (var i = 0; i < ths.length; i++) {
+      // Compara cada dato en la lista con el texto en el th
+      for (var j = 0; j < datos.length; j++) {
+        if (ths[i].textContent.trim() === datos[j].trim()) {
+          // Agrega la clase 'highlighted' al th correspondiente
+          ths[i].classList.add('highlighted');
+        }
+      }
+    }
+  }
+
+  // Ejemplo: ilumina los th correspondientes a la lista de datos
+  iluminarPorDatos(["A"]);
+</script>
+
+  </html>

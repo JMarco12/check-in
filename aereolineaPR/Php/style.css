@@ -1,5 +1,22 @@
 .estamonda{
 	width: 40%;
 	margin: 5%;
-	
+
 }
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+  }
+
+  th {
+	text-align: center;
+  }
+
+  th {
+	background-color: #f2f2f2;
+  }
+
+  th.highlighted {
+	background-color: yellow;
+  }
