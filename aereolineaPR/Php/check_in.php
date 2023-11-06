@@ -1,6 +1,10 @@
+<?php
+ require "../conexion/validardatos.php"
+?>
+
 <!doctype html>
 <html lang="en">
-
+  
 <head>
   <title>Title</title>
   <!-- Required meta tags -->
@@ -17,46 +21,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Formulario de Información</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="container mt-5">
-    <form method="post" action="../conexion/registro.php" id="infoForm" class="needs-validation" novalidate>
-      <div class="form-group">
-        <label for="documento_identidad">Documento de Identificación</label>
-        <input type="text" class="form-control" id="documentoIdentidad" name="documento_identidad" pattern="[0-9]{9}" required>
-        <div class="invalid-feedback">
-          Por favor ingrese su documento de identificación.
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title mb-4">Check-In</h3>
+            <form method="post" action="../conexion/validardatos.php" >
+              <div class="form-group">
+                <label for="codigo_reserva">Código de Reserva</label>
+                <input type="text" class="form-control" id="codigo_reserva" name="codigo_reserva" placeholder="Ingrese el código de reserva" required>
+              </div>
+              <div class="form-group">
+                <label for="fecha_reserva">Fecha de Reserva</label>
+                <input type="date" class="form-control" id="fecha_reserva" name="fecha_reserva" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Realizar Check-In</button>
+            </form>
+          </div>
         </div>
       </div>
-      <div class="form-group">
-        <label for="nombre">Nombre</label>
-        <input type="text" class="form-control" id="nombre" name="nombre" required>
-        <div class="invalid-feedback">
-          Por favor ingrese su nombre.
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="apellido">Apellido</label>
-        <input type="text" class="form-control" id="apellido" name="apellido" required>
-        <div class="invalid-feedback">
-          Por favor ingrese su apellido.
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="email">Correo Electrónico</label>
-        <input type="email" class="form-control" id="correo" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"  required>
-        <div class="invalid-feedback">
-          Por favor ingrese un correo electrónico válido.
-        </div>
-      </div>
-      <button type="submit" class="btn btn-primary">Enviar</button>
-    </form>
+    </div>
   </div>
-
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
